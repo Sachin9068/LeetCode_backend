@@ -90,7 +90,6 @@ async function fetchData() {
   if(IsResultObtained)
     return result.submissions;
 
-  
   await waiting(1000);
 }
 

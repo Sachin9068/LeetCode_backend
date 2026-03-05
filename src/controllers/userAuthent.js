@@ -89,6 +89,7 @@ const adminRegister = async (req,res)=>{
          const token = jwt.sign({_id:user._id,role:user.role,emailId},process.env.JWT_KEY,{expiresIn:60*60});
          res.cookie('token',token,{maxAge:60*60*1000});
          res.status(201).send("User Registered Successfully");
+         
     }
     catch(err){
        res.status(400).send("Error  : "+err);
