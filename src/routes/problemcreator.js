@@ -7,7 +7,7 @@ const CreateProblem = require('../controllers/userProblem')
 
 problemRouter.post('/create',adminMiddleware,CreateProblem);
 problemRouter.patch('update/:id',adminMiddleware,UpdateProblem);
-problemRouter.delete('/:id',DeleteProblem);
+problemRouter.delete('/:id',adminMiddleware,DeleteProblem);
 
 // problemRouter.get('/:id',getProblemByid);
 // problemRouter.get('/',getAllProblem);

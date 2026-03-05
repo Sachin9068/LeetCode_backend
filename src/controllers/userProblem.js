@@ -54,4 +54,8 @@ const createProblem = async (req,res) => {
         res.status(400).send("Error: " + err.message); // ✅ fixed
     }
 };
-module.exports = createProblem;
+
+const UpdateProblem = async (req,res)=>{
+
+}
+module.exports = {createProblem,UpdateProblem};
